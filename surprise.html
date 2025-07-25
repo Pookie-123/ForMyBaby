@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surprise</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #ffb6c1;
+      padding: 15px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      background: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff1493;
+    }
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .star {
+      font-size: 24px;
+      opacity: 0.3;
+      transition: opacity 0.4s;
+    }
+    .star.active {
+      opacity: 1;
+      color: gold;
+    }
+    #wheel {
+      width: 200px;
+      height: 200px;
+      border: 10px solid #ff69b4;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      transition: transform 4s ease-out;
+    }
+    .hearts, .balloons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .heart, .balloon {
+      cursor: pointer;
+      font-size: 24px;
+      transition: transform 0.2s;
+    }
+    .heart:hover, .balloon:hover {
+      transform: scale(1.3);
+    }
+    .love-note {
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Surprise!</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="writings.html">Writings</a></li>
+        <li><a href="gifts.html">Gifts</a></li>
+        <li><a href="memories.html">Memories</a></li>
+        <li><a href="surprise.html" class="active">Surprise</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Click for a Hug</h2>
+      <button onclick="alert('🤗 A big warm hug just for you!')">Hug Me</button>
+    </div>
+
+    <div class="card">
+      <h2>Random Love Note</h2>
+      <button onclick="showNote()">Click for Love Note</button>
+      <div class="love-note" id="loveNote"></div>
+    </div>
+
+    <div class="card">
+      <h2>Click for a Kiss</h2>
+      <button onclick="alert('💋 A sweet kiss for the sweetest person!')">Kiss Me</button>
+    </div>
+
+    <div class="card">
+      <h2>Light Up the Stars</h2>
+      <button onclick="lightStars()">Click to Light Up</button>
+      <div class="stars" id="stars">
+        <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Click to Cuddle</h2>
+      <button onclick="alert('🫂 Here’s a cozy cuddle just for you!')">Cuddle Me</button>
+    </div>
+
+    <div class="card">
+      <h2>Spin the Wheel of Love</h2>
+      <div id="wheel">❤️</div>
+      <button onclick="spinWheel()">Spin Me</button>
+    </div>
+
+    <div class="card">
+      <h2>Unwrap a Gift</h2>
+      <button onclick="alert('🎁 It’s filled with my love for you!')">Unwrap</button>
+    </div>
+
+    <div class="card">
+      <h2>Love Confetti</h2>
+      <button onclick="alert('🎉 Love confetti showering down! You’re amazing!')">Celebrate</button>
+    </div>
+
+    <div class="card">
+      <h2>Feel My Heartbeat</h2>
+      <button onclick="alert('❤️ Thump thump… Always beats for you!')">Hear Heart</button>
+    </div>
+
+    <div class="card">
+      <h2>Memory Reveal</h2>
+      <button onclick="alert('📸 Remember that walk in Jaipur? Always in my heart.')">Reveal Memory</button>
+    </div>
+
+    <div class="card">
+      <h2>Wrap in Blanket</h2>
+      <button onclick="alert('🧣 You’re now wrapped in the coziest love blanket ever!')">Wrap Me</button>
+    </div>
+
+    <div class="card">
+      <h2>Start Our Love Song</h2>
+      <button onclick="alert('🎶 Imagine “Perfect” by Ed Sheeran playing just for us…')">Play Song</button>
+    </div>
+
+    <div class="card">
+      <h2>Mini Game: Catch the Hearts</h2>
+      <p>Click as many hearts as you can!</p>
+      <div class="hearts" id="hearts"></div>
+      <button onclick="spawnHearts()">Start</button>
+    </div>
+
+    <div class="card">
+      <h2>Mini Game: Balloon Pop!</h2>
+      <p>Pop them with love 💖</p>
+      <div class="balloons" id="balloons"></div>
+      <button onclick="spawnBalloons()">Pop Balloons</button>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Our Love Story. Made with all my heart.</p>
+  </footer>
+
+  <script>
+    const notes = [
+      "You're my favorite notification.",
+      "You make ordinary moments magical.",
+      "My heart smiles every time I think of you.",
+      "You're my today and all of my tomorrows.",
+      "Just thinking of you makes my day."
+    ];
+
+    function showNote() {
+      const note = notes[Math.floor(Math.random() * notes.length)];
+      document.getElementById("loveNote").innerText = "${note}";
+    }
+
+    function lightStars() {
+      document.querySelectorAll('.star').forEach(star => {
+        star.classList.add('active');
+      });
+    }
+
+    function spinWheel() {
+      const wheel = document.getElementById("wheel");
+      const degree = Math.floor(5000 + Math.random() * 2000);
+      wheel.style.transform = rotate(${degree}deg);
+    }
+
+    function spawnHearts() {
+      const container = document.getElementById("hearts");
+      container.innerHTML = "";
+      for (let i = 0; i < 10; i++) {
+        const heart = document.createElement("span");
+        heart.className = "heart";
+        heart.textContent = "❤️";
+        heart.onclick = () => heart.remove();
+        container.appendChild(heart);
+      }
+    }
+
+    function spawnBalloons() {
+      const container = document.getElementById("balloons");
+      container.innerHTML = "";
+      for (let i = 0; i < 10; i++) {
+        const balloon = document.createElement("span");
+        balloon.className = "balloon";
+        balloon.textContent = "🎈";
+        balloon.onclick = () => balloon.remove();
+        container.appendChild(balloon);
+      }
+    }
+  </script>
+</body>
+</html>

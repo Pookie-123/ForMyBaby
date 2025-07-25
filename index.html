@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Us Forever 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4ec, #fff5fa);
+      color: #4a4a4a;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #ffb6c1;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+    }
+    nav {
+      background-color: #fff0f5;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ff69b4;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+    .animated-text {
+      font-size: 1.5rem;
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 6s infinite;
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-800px) rotate(45deg); opacity: 0; }
+    }
+    footer {
+      background-color: #ffb6c1;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Our Little Love World 💘</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="our-journey.html">Our Journey</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="letters.html">Writings</a>
+  </nav>
+
+  <section>
+    <h2 class="animated-text">Congratulations on DU, my love! 🎓</h2>
+    <p class="animated-text">You made it! And I couldn’t be prouder. From our Jaipur trip to quiet moments, from my confession to our every day since... this site is our little bubble of love, frozen in time. 💞</p>
+    <p class="animated-text">I’ll keep adding more... but this is our beginning of forever.</p>
+  </section>
+
+<section style="background: #fff0f5; padding: 1.5rem; border-radius: 12px; margin: 1.5rem auto; max-width: 700px;">
+    <h3 style="font-family: 'Dancing Script', cursive;">A Note to You 💖</h3>
+    <p>Hey baby,<br><br>
+    It’s been almost 4 months since we officially became <b>us</b>. I still remember the moment I told you how I felt — nervous, shy, and full of hope. You made it so easy to fall in love. From every “good morning” to our shared silences and goofy laughter — you’ve changed my life.<br><br>
+    This is for you. For us. For always.</p>
+    <p style="text-align: right; font-style: italic;">– Yours</p>
+  </section>
+
+
+  <section>
+    <h3>One of My Favs of Us 📸</h3>
+    <img src="we.jpg" alt="Us:D" style="width: 250px; border: 8px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-top: 1rem; border-radius: 12px;" />
+    <p><small>Just us. Just home. Just love.</small></p>
+  </section>
+
+  <section>
+    <p style="font-size: 1.2rem; margin-top: 3rem; font-style: italic;">“You feel like home — and I never want to leave.”</p>
+  </section>
+
+  <!-- Floating hearts -->
+  <script>
+    for (let i = 0; i < 15; i++) {
+      let heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <footer>
+    Made with all my heart 🥺❤️ — 4 months and forever to go.
+  </footer>
+</body>
+</html>
