@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loading Surprise... 🎮💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #ffd6ec, #ffe2f0);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-direction: column;
+      color: #ff4081;
+    }
+
+    .loader {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      background: red;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: rotate(45deg);
+      animation: floatHeart 2s infinite ease-in-out;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatHeart {
+      0%, 100% { transform: translate(-50%, -50%) rotate(45deg) scale(1); }
+      50% { transform: translate(-50%, -60%) rotate(45deg) scale(1.2); }
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      text-align: center;
+      animation: fadeInText 1.5s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInText {
+      to { opacity: 1; }
+    }
+
+    .loading-bar {
+      width: 60%;
+      background: #ffc0cb;
+      border-radius: 30px;
+      overflow: hidden;
+      margin-top: 30px;
+      height: 20px;
+      box-shadow: inset 0 0 10px #ff69b4;
+    }
+
+    .bar {
+      width: 0%;
+      height: 100%;
+      background: #ff69b4;
+      animation: loadBar 6s forwards;
+    }
+
+    @keyframes loadBar {
+      to { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader">
+    <div class="heart"></div>
+  </div>
+
+  <div class="message">💖 Syncing our sweetest memories...</div>
+
+  <div class="loading-bar">
+    <div class="bar"></div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="your-background-music.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    // Redirect to the actual page after 6 seconds
+    setTimeout(() => {
+      window.location.href = "surprise-page.html"; // change to your actual page
+    }, 6000);
+  </script>
+
+</body>
+</html>

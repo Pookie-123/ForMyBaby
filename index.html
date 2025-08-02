@@ -93,15 +93,16 @@
   </nav>
 
   <section>
-    <h2 class="animated-text">Congratulations on DU, my love! 🎓</h2>
-    <p class="animated-text">You made it! And I couldn’t be prouder. From our Jaipur trip to quiet moments, from my confession to our every day since... this site is our little bubble of love, frozen in time. 💞</p>
-    <p class="animated-text">I’ll keep adding more... but this is our beginning of forever.</p>
+    <h2 class="animated-text">Happy 3 Months, my love! 💗🌙✨</h2>
+    <p class="animated-text">We’ve made it through three beautiful months together and I couldn’t be prouder of us. From the magic of our Jaipur trip to the quiet, everyday moments, from the day I confessed to everything we've shared since… this site is our little bubble of love, frozen in time. 💞</p>
+    <p class="animated-text">I’ll keep adding more pieces to it, just like we keep adding to us.
+Because this isn’t just three months, it’s the beginning of forever.♾️🏠💍</p>
   </section>
 
 <section style="background: #fff0f5; padding: 1.5rem; border-radius: 12px; margin: 1.5rem auto; max-width: 700px;">
     <h3 style="font-family: 'Dancing Script', cursive;">A Note to You 💖</h3>
     <p>Hey baby,<br><br>
-    It’s been almost 3 months since we officially became <b>us</b>. I still remember the moment I told you how I felt — nervous, shy, and full of hope. You made it so easy to fall in love. From every “good morning” to our shared silences and goofy laughter you have changed my life.<br><br>
+    It’s been 3 months since we officially became <b>us</b>. I still remember the moment I told you how I felt nervous, shy, and full of hope. You made it so easy to fall in love. From every “good morning” to our shared silences and goofy laughter you have changed my life.<br><br>
     This is for you. For us. For always.</p>
     <p style="text-align: right; font-style: italic;">– Yours</p>
   </section>
@@ -129,7 +130,176 @@
   </script>
 
   <footer>
-    Made with all my heart 🥺❤️ — 4 months and forever to go.
+    Made with all my heart 🥺❤️ — 3 months and forever to go.
   </footer>
+
+<!-- 💞 3rd Month Anniversary Modal -->
+<div id="anniversaryModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center; overflow:auto; animation: fadeInBg 1s ease;">
+  <div style="background: #fff0f5; padding:2.5rem; border-radius:25px; text-align:center; max-width: 800px; width:90%; position:relative; box-shadow: 0 20px 60px rgba(0,0,0,0.5); animation: slideUp 1.2s ease; font-family:'Poppins',sans-serif;">
+    
+    <!-- ✨ Emojis Sparkle -->
+    <div class="sparkle-heart"></div>
+
+    <!-- 💘 Title -->
+    <h1 style="font-family: 'Dancing Script', cursive; font-size: 3rem; color:#ff69b4; animation: popIn 1s ease;">Happy 3 Months, Baby 💞😭🎉</h1>
+
+    <!-- 💌 Message -->
+    <p style="margin-top: 1rem; font-size: 1.2rem; color: #444; animation: fadeInText 2s ease;">
+      3 months of love, laughter, blushes, kisses, cuddles, and everything in between.  
+      <br><br>
+      From Jaipur sunsets to silly giggles, you’ve become my person — my favorite hello, my hardest goodbye 💗
+    </p>
+
+    <!-- 🎥 Video -->
+    <video controls autoplay muted loop style="margin-top: 1.5rem; width:100%; max-width:650px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+      <source src="3m_anni.mp4" type="video/mp4" />
+      Your browser doesn't support the video tag.
+    </video>
+<p style="text-align: center; font-size: 1.1rem; margin-top: 0.8rem; color: #444;">
+  This video holds the softest parts of my heart...little pieces of us, stitched together with love.  
+  Just something I made to say... I'm so grateful we found each other. Happy 3 months, my love. 💖
+</p>
+
+    <!-- 🎶 Music -->
+    <audio id="bgMusic" autoplay loop>
+      <source src="your-music.mp3" type="audio/mp3" />
+      Your browser doesn't support the audio element.
+    </audio>
+
+    <!-- 💫 Quote -->
+    <p style="margin-top:1.5rem; font-style:italic; color:#ff69b4; font-size:1.2rem; animation: fadeInText 2s ease 1s;">“You’re the ‘home’ my heart searched for.” 💌</p>
+
+    <!-- ✅ Close Button -->
+    <button onclick="closeModal()" style="margin-top:2rem; background-color: #ff69b4; color: white; padding: 0.8rem 1.6rem; border: none; border-radius: 12px; font-size: 1.1rem; cursor: pointer; animation: fadeInText 2s ease 1.5s;">Take me to our love world 💖</button>
+  </div>
+</div>
+
+<!-- 🎉 Confetti Canvas -->
+<canvas id="confettiCanvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:10000;"></canvas>
+
+<!-- 💅 Style & Animation -->
+<style>
+@keyframes fadeInBg {
+  0% { background: rgba(0,0,0,0); }
+  100% { background: rgba(0,0,0,0.9); }
+}
+@keyframes slideUp {
+  0% { transform: translateY(80px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.sparkle-heart::before, .sparkle-heart::after {
+  content: "💖";
+  font-size: 2rem;
+  position: absolute;
+  animation: floatUp 6s infinite ease-in-out;
+}
+.sparkle-heart::before {
+  left: 20%;
+  top: -60px;
+  animation-delay: 0s;
+}
+.sparkle-heart::after {
+  right: 20%;
+  top: -80px;
+  animation-delay: 2s;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(600px); opacity: 0; }
+}
+body.modal-open {
+  overflow: hidden;
+}
+</style>
+
+<!-- 💻 JavaScript Logic -->
+<script>
+ function showModalIfWithinISTRange() {
+  const nowUTC = new Date();
+
+  // Convert UTC to IST
+  const ISTOffsetMinutes = 5.5 * 60;
+  const istNow = new Date(nowUTC.getTime() + ISTOffsetMinutes * 60 * 1000);
+
+  const year = istNow.getFullYear();
+
+  // Aug 3, 2025 00:00 IST to Aug 4, 2025 00:00 IST
+const showFrom = new Date(Date.UTC(2025, 7, 1, 18, 30, 0)); // July 31 00:00 IST = July 30 18:30 UTC
+const showTo = new Date(Date.UTC(2025, 7, 3, 18, 30, 0));   // Aug 1 00:00 IST = July 31 18:30 UTC
+
+
+  if (nowUTC >= showFrom && nowUTC < showTo) {
+    document.body.classList.add("modal-open");
+    document.getElementById("anniversaryModal").style.display = "flex";
+    startConfetti();
+  }
+}
+
+  function closeModal() {
+    document.getElementById("anniversaryModal").style.display = "none";
+    document.body.classList.remove("modal-open");
+    stopConfetti();
+    document.getElementById("bgMusic").pause();
+  }
+
+  // 🎉 Confetti code
+  const confetti = document.getElementById("confettiCanvas");
+  const ctx = confetti.getContext("2d");
+  let confettiPieces = [];
+
+  function startConfetti() {
+    confetti.width = window.innerWidth;
+    confetti.height = window.innerHeight;
+    for (let i = 0; i < 150; i++) {
+      confettiPieces.push({
+        x: Math.random() * confetti.width,
+        y: Math.random() * confetti.height - confetti.height,
+        r: Math.random() * 6 + 4,
+        d: Math.random() * 20 + 10,
+        color: `hsl(${Math.random() * 360}, 100%, 75%)`,
+        tilt: Math.random() * 10 - 5,
+        tiltAngle: 0
+      });
+    }
+    animateConfetti();
+  }
+
+  function animateConfetti() {
+    ctx.clearRect(0, 0, confetti.width, confetti.height);
+    confettiPieces.forEach((p, i) => {
+      ctx.beginPath();
+      ctx.fillStyle = p.color;
+      ctx.arc(p.x + p.tilt, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      p.y += Math.cos(p.d / 10) + 1;
+      p.tiltAngle += 0.1;
+      p.tilt = Math.sin(p.tiltAngle) * 10;
+      if (p.y > confetti.height) {
+        p.y = -10;
+        p.x = Math.random() * confetti.width;
+      }
+    });
+    requestAnimationFrame(animateConfetti);
+  }
+
+  function stopConfetti() {
+    confettiPieces = [];
+    ctx.clearRect(0, 0, confetti.width, confetti.height);
+  }
+
+  window.onload = showModalIfWithinISTRange;
+</script>
+
+
+
+
 </body>
 </html>
